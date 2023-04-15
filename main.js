@@ -56,23 +56,6 @@ function createWindow() {
     }
   })
 
-  const kbWindow = new BrowserWindow({
-    width: 2000,
-    height: 2000,
-    icon: path.join("picture/iconkb.ico"),
-    backgroundColor: '#2e2c29',
-    fullscreen: false,
-    maximizable: true,
-    title: "Confluence",
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js'),
-      nodeIntegration: true,
-      contextIsolation: false,
-      allowDisplayingInsecureContent: true,
-      allowRunningInsecureContent: true
-    }
-  })
-
   // and load the index.html of the app.
   unifiWindow.loadFile('index.html');
   unifiWindow.loadURL('https://unifi.abcbakery.cloud/');
@@ -82,9 +65,6 @@ function createWindow() {
 
   ucmWindow.loadFile('index.html');
   ucmWindow.loadURL('https://dt.abcbakery.co:8089/');
-
-  kbWindow.loadFile('index.html');
-  kbWindow.loadURL('https://kb.abcbakery.co');
   //Open the DevTools.
   //mainWindow.webContents.openDevTools()
 }
